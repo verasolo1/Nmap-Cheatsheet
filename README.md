@@ -10,7 +10,8 @@ A comprehensive Nmap Cheatsheet
 7. [Scan Optimization](#scan-optimization)
 8. [Save Scan Results](#save-scan-results)
 ## Host Discovery 
-$ adad
+```bash
+$ ada
 ### Best commands for Host Discovery
 ## Port Scanning
 ## Nmap Default Scan
