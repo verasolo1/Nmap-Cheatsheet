@@ -12,6 +12,7 @@ A comprehensive Nmap Cheatsheet
 ## Host Discovery 
 ```bash
 $ ada
+```
 ### Best commands for Host Discovery
 ## Port Scanning
 ## Nmap Default Scan
