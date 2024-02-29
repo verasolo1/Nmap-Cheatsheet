@@ -1,5 +1,4 @@
 # Nmap-Cheatsheet
-A comprehensive Nmap Cheatsheet
 ## Table of Contents
 1. [Host Discovery](#host-discovery)
 2. [Port Scanning](#port-scanning)
