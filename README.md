@@ -226,5 +226,3 @@ nmap -F
 
 ## Credits
 ### https://nmap.org/
-
->>>>>>> f94d7b0 (Adding all the cheatsheet)
