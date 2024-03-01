@@ -2,12 +2,11 @@
 ## Table of Contents
 1. [Host Discovery](#host-discovery)
 2. [Port Scanning](#port-scanning)
-3. [Nmap Default Scan](#nmap-default-scan)
-4. [Service Version & OS Detection](#service-version--os-detection)
-5. [Nmap Scripting Engine (NSE)](#nmap-scripting-engine-nse)
-6. [Firewall & IDS Evasion](#firewall--ids-evasion)
-7. [Scan Optimization](#scan-optimization)
-8. [Save Scan Results](#save-scan-results)
+3. [Service Version & OS Detection](#service-version--os-detection)
+4. [Nmap Scripting Engine (NSE)](#nmap-scripting-engine-nse)
+5. [Firewall & IDS Evasion](#firewall--ids-evasion)
+6. [Scan Optimization](#scan-optimization)
+7. [Save Scan Results](#save-scan-results)
 ## Host Discovery 
 When utilizing host discovery it is crucial to use "-sn"; to disable Port scanning
 ```bash
@@ -57,7 +56,6 @@ Then you can add these switches along with "-Pn":
 | Filtered | Windows firewall is not active or there aren’t any rules for that particular port that is intercepting traffic  | 
 | Closed   | Confirms the fact that you are dealing with a Windows firewall                                                   | 
 ### !!Sometimes Nmap can not really be sure whether the port is filtered or closed!!
-## Nmap Default Scan
 ## Service Version & OS Detection 
 #### To utilize service version detection:
 ```bash
