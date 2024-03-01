@@ -141,7 +141,7 @@ You can detect a firewall using the "ACK Scan". Depending on the result
 nmap -sA 
 ```
 | Result   |              Fact               |
-|--------------------------------------------| 
+|----------|---------------------------------| 
 | Open     | There is no filtering mechanism |
 | Filtered | There is a filtering mechanism  |
 ### IDS Evasion 
