@@ -12,7 +12,7 @@ When utilizing host discovery it is crucial to use "-sn"; to disable Port scanni
 ```bash
  nmap -sn <Target-ip>
 ```
-In some cases you must use this command against Windows machines to disable ping scans
+In some cases, you must use this command against Windows machines to disable ping scans
 ```bash
 nmap -Pn <Target-ip>
 ```
@@ -155,9 +155,6 @@ nmap -sA
 | -T0                       | Slowing down your scan                                          |
 | --scan-delay              | Space the duration between each packet being sent               |
 ## Scan Optimization 
-<<<<<<< HEAD
-## Save Scan Results
-=======
 ### Time Templates
 |  Switch  |              Name               |
 |----------|---------------------------------|
