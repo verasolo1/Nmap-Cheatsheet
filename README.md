@@ -13,7 +13,7 @@ When utilizing host discovery it is crucial to use "-sn"; to disable Port scanni
 ```bash
  nmap -sn <Target-ip>
 ```
-Some Cases you must use this command against windows machines to disable ping scans
+In some cases you must use this command against Windows machines to disable ping scans
 ```bash
 nmap -Pn <Target-ip>
 ```
@@ -24,7 +24,7 @@ Then you can add other switches along with "-sn":
 | -PU      | UDP ping       | Faster & good if host do not respond for TCP   |
 | -PS      | TCP SYN Ping   | Quiter                                         |
 | -PE      | ICMP echos     |                                                |
-All of these four switches you can specify a port along with them:
+For all of these four switches, you can specify a port along with them:
 ##### Example:
 ``` bash
 nmap -sn -PS21 <Target-ip>
@@ -39,23 +39,23 @@ nmap -sn -T4 -PS21,22,25,80,445,3389,8080 -PU137,138 10.0.2.0/24
 nmap -sn -T4 10.0.2.0/24
 ```
 ## Port Scanning
-After we knew the up hosts we must skip host discovery phase by adding this switch:
+After we knew the up hosts we must skip the host discovery phase by adding this switch:
 ```bash
 nmap -Pn <target-ip>
 ```
 Then you can add these switches along with "-Pn":
-| Switch   |   Name                 | Feature                                | Nothes               | 
+| Switch   |   Name                 | Feature                                | Notes                | 
 |----------|------------------------|----------------------------------------|-----------------------
 | -sS      | SYN Scan               | Sends a SYN                            | Stealthy and fast    |
 | -sT      | TCP Connect Scan       | Utilize full Three-way-handshake       | Loud                 |
-| -sU      | UDP Scan               | Sends UDP porbes                       | Fast                 |
+| -sU      | UDP Scan               | Sends UDP probes                       | Fast                 |
 | -sA      | ACK Scan               | Sends an ACK                           | Detect Firewalls     |
 ### Ports states
 | States   |                                                   Meaning                                                        | 
 |----------|------------------------------------------------------------------------------------------------------------------|
-| Open     | There are traffic intercepting this port                                                                         | 
-| Filtered | Windows firewall is not active or there aren’t any rules for that particular port that are intercepting traffic  | 
-| Closed   | Confirms the fact that you are dealing with a windows firewall                                                   | 
+| Open     | There is traffic intercepting this port                                                                         | 
+| Filtered | Windows firewall is not active or there aren’t any rules for that particular port that is intercepting traffic  | 
+| Closed   | Confirms the fact that you are dealing with a Windows firewall                                                   | 
 ### !!Sometimes Nmap can not really be sure whether the port is filtered or closed!!
 ## Nmap Default Scan
 ## Service Version & OS Detection 
@@ -63,7 +63,7 @@ Then you can add these switches along with "-Pn":
 ```bash
 nmap -sV <target-ip>
 ```
-#### To increase the the intensity of the version detection:
+#### To increase the intensity of the version detection:
 ```bash
 nmap -sV --version-intensity<0-9>
 ```
@@ -83,7 +83,7 @@ nmap -Pn -sS -p- -sV --version-intensity 8 -O --osscan-guess -T4 <target ip>
 -p- : to scan all ports
 -T<0-5> : Speed up your scan
 ## Nmap Scripting Engine (NSE)
-### You can find all the the Nmap scripts in this folder:
+### You can find all the Nmap scripts in this folder:
 ```bash
 ls -l /usr/share/nmap/scripts | grep <Service>
 ```
@@ -102,10 +102,10 @@ and a lot more...
 ```bash
 nmap -sC <Target-ip>
 ```
-The default script scan will use a Set of scripts, provide usefully information without exploit or damage the target system 
-Whenever the NSE detect a service that have a script for it, it will run. BUT only if this scripts falls with the DEFAULT category
+The default script scan will use a Set of scripts, and provide useful information without exploiting or damaging the target system 
+Whenever the NSE detects a service that has a script for it, it will run. But only if this script falls within the DEFAULT category
 ### Specify a script or multiple scripts
-!!Dont include the extension in the command (.NSE)!!
+!!Don't include the extension in the command (.NSE)!!
 ```bash
 nmap --script=<Script-Name> <target-ip>
 ```
@@ -135,7 +135,7 @@ This will scan using all scripts related to "http"
 ```bash
 nmap -sS -T4 -p20,21 --script=http* <target-ip>
 ```
-#### !! It is preferable to add [-sS -sV -Pn] along with both default or specified script !!
+#### !! It is preferable to add [-sS -sV -Pn] along with both default or specified scripts!!
 ## Firewall & IDS Evasion
 ### Detecting the presence of a firewall or a filtering mechanism
 You can detect a firewall using the "ACK Scan". Depending on the result
@@ -155,7 +155,7 @@ nmap -sA
 | -D <ip>                   | Altering the destination IP                                     |
 | -g <Port>                 | Altering the destination port                                   |
 | -T0                       | Slowing down your scan                                          |
-| --scan-delay              | Space the deration between each packet being sent               |
+| --scan-delay              | Space the duration between each packet being sent               |
 ## Scan Optimization 
 <<<<<<< HEAD
 ## Save Scan Results
@@ -169,7 +169,7 @@ nmap -sA
 |   -T3    | Default                         |
 |   -T4    | Aggresive. Fast and reliable    |
 |   -T5    | Insane. Not accurate in results |
-### To give up on an non-responding target while host discovering (You might lose an up host)
+### To give up on a non-responding target while the host discovering (You might lose an up host)
 #### Example:
 ```bash
 nmap --host-timeout <time> 10.0.2.0/24
