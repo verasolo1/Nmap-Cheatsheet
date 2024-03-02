@@ -145,15 +145,15 @@ nmap -sA
 | Open     | There is no filtering mechanism |
 | Filtered | There is a filtering mechanism  |
 ### IDS Evasion 
-|          Switch           |                           Result                                | 
-|---------------------------|-----------------------------------------------------------------| 
-| -f --mtu<multiplies of 8> | Fragment the sending packets and you can optimize the data size |
-| --ttl <Value>             | Altering the Time To Live value                                 |
-| --data-length <Value>     | Altering data length                                            |  
-| -D <ip>                   | Altering the destination IP                                     |
-| -g <Port>                 | Altering the destination port                                   |
-| -T0                       | Slowing down your scan                                          |
-| --scan-delay              | Space the duration between each packet being sent               |
+|          Switch             |                           Result                                | 
+|-----------------------------|-----------------------------------------------------------------| 
+| -f --mtu<multiplies of 8>   | Fragment the sending packets and you can optimize the data size |
+| --ttl<Value>                | Altering the Time To Live value                                 |
+| --data-length<Value>        | Altering data length                                            |  
+| -D <ip>                     | Altering the destination IP                                     |
+| -g<Port>                    | Altering the destination port                                   |
+| -T0                         | Slowing down your scan                                          |
+| --scan-delay<value>         | Space the duration between each packet being sent               |
 ## Scan Optimization 
 ### Time Templates
 |  Switch  |              Name               |
