@@ -97,6 +97,7 @@ ls -l /usr/share/nmap/scripts | grep <Service>
 | Brute         | Brute-Force Attack        |
 and a lot more...
 ### Default Script Scan
+#### -sC = Default Script Scan = -sV + -O 
 ```bash
 nmap -sC <Target-ip>
 ```
@@ -147,13 +148,13 @@ nmap -sA
 ### IDS Evasion 
 |          Switch                  |                      Result                                          | 
 |----------------------------------|----------------------------------------------------------------------| 
-| -f --mtu<multiplies of 8>        | Fragment the sending packets and you can optimize the data size      |
-| --ttl<Value>                     | Altering the Time To Live value                                      |
-| --data-length<Value>             | Altering data length                                                 |  
-| -D <ip>                          | Altering the destination IP                                          |
-| -g<Port>                         | Altering the destination port                                        |
+| -f --mtu <multiplies of 8>       | Fragment the sending packets and you can optimize the data size      |
+| --ttl <ex.252>                   | Altering the Time To Live value                                      |
+| --data-length <ex.1200>          | Altering data length                                                 |  
+| -D <ex.10.0.2.15>                | Altering the destination IP                                          |
+| -g <ex.80>                       | Altering the destination port                                        |
 | -T0                              | Slowing down your scan                                               |
-| --scan-delay<value>              | Space the duration between each packet being sent                    |
+| --scan-delay <ex.10s>            | Space the duration between each packet being sent                    |
 -----------------------------------------------------------------------------------------------------------
 ## Scan Optimization 
 ### Time Templates
@@ -168,8 +169,9 @@ nmap -sA
 ### To give up on a non-responding target while the host discovering (You might lose an up host)
 #### Example:
 ```bash
-nmap --host-timeout <time> 10.0.2.0/24
+nmap --host-timeout <xs;ym;zh> 10.0.2.0/24 
 ```
+ s: Seconds , m: Minutes . h: Hours. You can use only seconds if you want to.
 ## Save Scan Results
 |  Switch  |     Purpose and extension         |
 |----------|-----------------------------------|
