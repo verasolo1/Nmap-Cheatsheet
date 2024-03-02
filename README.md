@@ -145,15 +145,16 @@ nmap -sA
 | Open     | There is no filtering mechanism |
 | Filtered | There is a filtering mechanism  |
 ### IDS Evasion 
-|          Switch             |                           Result                                | 
-|-----------------------------|-----------------------------------------------------------------| 
-| -f --mtu<multiplies of 8>   | Fragment the sending packets and you can optimize the data size |
-| --ttl<Value>                | Altering the Time To Live value                                 |
-| --data-length<Value>        | Altering data length                                            |  
-| -D <ip>                     | Altering the destination IP                                     |
-| -g<Port>                    | Altering the destination port                                   |
-| -T0                         | Slowing down your scan                                          |
-| --scan-delay<value>         | Space the duration between each packet being sent               |
+|          Switch                  |                      Result                                          | 
+|----------------------------------|----------------------------------------------------------------------| 
+| -f --mtu<multiplies of 8>        | Fragment the sending packets and you can optimize the data size      |
+| --ttl<Value>                     | Altering the Time To Live value                                      |
+| --data-length<Value>             | Altering data length                                                 |  
+| -D <ip>                          | Altering the destination IP                                          |
+| -g<Port>                         | Altering the destination port                                        |
+| -T0                              | Slowing down your scan                                               |
+| --scan-delay<value>              | Space the duration between each packet being sent                    |
+-----------------------------------------------------------------------------------------------------------
 ## Scan Optimization 
 ### Time Templates
 |  Switch  |              Name               |
@@ -175,8 +176,15 @@ nmap --host-timeout <time> 10.0.2.0/24
 |   -oN    | Normal .txt format                |
 |   -oX    | .XML format. Used for databases   |                       
 |   -oG    | Grepable format. Used for scripts |                         
-|   -oA    | A compination of (oX + oN + oG)   |                      
-## Other
+|   -oA    | A compination of (oX + oN + oG)   |    
+#### Examples:
+```bash
+nmap -sS -sV -T4 -O 10.0.2.11 -oN result.txt
+```
+```bash
+nmap -sS -sV -T4 -O 10.0.2.11 -oX result.xml
+```
+## Others
 ### Disable DNS resolution to make your scan faster
 ```bash
 nmap -n 
